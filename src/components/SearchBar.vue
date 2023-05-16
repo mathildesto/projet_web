@@ -29,11 +29,11 @@
     },
     methods: {
       handleSearch() {
-        this.$emit("input", this.search);
+        this.$emit("search", this.search);
       },
       cleanSearch() {
         this.search = "";
-        this.$emit("input", "");
+        this.$emit("search", ""); // Emit empty string to clear the search
       },
       handleSort() {
         this.$emit("sort", this.sortType);

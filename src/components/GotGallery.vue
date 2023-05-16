@@ -1,6 +1,6 @@
 <template>
   <div class="got-gallery">
-    <SearchBar v-model="search" @sort="handleSort" />
+    <SearchBar v-model="search" @search="handleSearch" @sort="handleSort" />
 
     <div class="gallery">
       <div class="card" v-for="character in filteredGotData" :key="character.id">
@@ -63,6 +63,9 @@ export default {
   methods: {
     async retrieveGotData() {
       this.gotData = await getGotData()
+    },
+    handleSearch(search) {
+      this.search = search
     },
     handleSort(sortType) {
       this.persoSortType = sortType
