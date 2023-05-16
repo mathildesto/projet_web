@@ -1,15 +1,18 @@
 <template>
   <div class="got-gallery">
-    <SearchBar v-model="search" @search="handleSearch" @sort="handleSort" />
+    <SearchBar v-model="search" @search="handleSearch" />
+    <FilterBar @sort="handleSort" />
 
     <div class="gallery">
       <div class="card" v-for="character in filteredGotData" :key="character.id">
-        <gotCard :firstName="character.firstName"
-                 :lastName="character.lastName"
-                 :fullName="character.fullName"
-                 :title="character.title"
-                 :family="character.family"
-                 :imageUrl="character.imageUrl" />
+        <gotCard
+          :firstName="character.firstName"
+          :lastName="character.lastName"
+          :fullName="character.fullName"
+          :title="character.title"
+          :family="character.family"
+          :imageUrl="character.imageUrl"
+        />
       </div>
     </div>
   </div>
@@ -19,7 +22,7 @@
 import gotCard from './gotCard.vue'
 import { getGotData } from "@/services/gotAPI.js"
 import SearchBar from './SearchBar.vue'
-
+import FilterBar from './FilterBar.vue'
 
 export default {
   name: "GotGallery",
@@ -75,6 +78,7 @@ export default {
   components: {
     gotCard,
     SearchBar,
+    FilterBar, // Include the FilterBar component here
   },
 }
 </script>
