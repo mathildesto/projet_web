@@ -1,33 +1,25 @@
 <template>
-      <div class="got-gallery">
-    <div class="gallery-options">
-      <input type="text" name="search" placeholder="Chercher un personnage" v-model="search" />
-      <button v-if="search" @click="cleanSearch">X</button> <!--ajout -->
-      <label for="dog-sort">Trier par :  </label>
-      <select v-model="persoSortType" id="perso-sort">
-        <option value="AZName">Noms de A à Z</option>
-        <option value="ZAName">Noms de Z à A</option>
-        <option value="AZHouse">Maison de A à Z</option>
-        <option value="ZAHouse">Maison de Z à A</option>
-      </select>
-    </div> 
+  <div class="got-gallery">
+    <SearchBar v-model="search" @sort="handleSort" />
+
     <div class="gallery">
       <div class="card" v-for="character in filteredGotData" :key="character.id">
-        <gotCard :firstName="character.firstName" 
+        <gotCard :firstName="character.firstName"
                  :lastName="character.lastName"
                  :fullName="character.fullName"
                  :title="character.title"
-                 :family="character.family" 
-                 :imageUrl="character.imageUrl"/>
+                 :family="character.family"
+                 :imageUrl="character.imageUrl" />
       </div>
     </div>
   </div>
 </template>
 
-
 <script>
 import gotCard from './gotCard.vue'
 import { getGotData } from "@/services/gotAPI.js"
+import SearchBar from './SearchBar.vue'
+
 
 export default {
   name: "GotGallery",
@@ -72,15 +64,15 @@ export default {
     async retrieveGotData() {
       this.gotData = await getGotData()
     },
-    cleanSearch() {
-      this.search = ""
+    handleSort(sortType) {
+      this.persoSortType = sortType
     },
   },
 
   components: {
     gotCard,
+    SearchBar,
   },
-  
 }
 </script>
   
