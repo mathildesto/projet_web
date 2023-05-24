@@ -31,7 +31,7 @@
       position: relative;
       bottom: 0;
       width: 100%;
-      height: 60px;
+      height: 20px;
       margin-top: auto;
   }
 

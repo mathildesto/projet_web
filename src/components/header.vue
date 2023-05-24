@@ -1,56 +1,71 @@
 <template>
-    <div class="intro">
-    <h1>Connaissez-vous les personnages ?</h1>
-    <p>Bienvenue dans notre galerie de personnages de Game of Thrones ! Cette série télévisée épique est célèbre pour ses intrigues 
-      politiques, ses batailles épiques et son vaste éventail de personnages mémorables. Nous avons rassemblé ici une collection de 
-      certaines des figures les plus emblématiques de la série, de Jon Snow à Daenerys Targaryen en passant par Tyrion Lannister. 
-      Découvrez les portraits, les biographies et les moments clés de chaque personnage, et plongez dans l'univers de Westeros</p>
-    </div>
-  </template>
-  
-  
-  <script>
-  export default {
-    name: "HeaderGot"
-  };
-  </script>
-  
-  
-  <style scoped>
-.intro {
-  background-image: url('https://wallpapercave.com/wp/wp2577505.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 500px; /* Hauteur du conteneur */
-  position: relative; /* Positionnement relatif pour les éléments enfants */
-  font-family: Arial, sans-serif;
-  color: #f4f4f3;
+  <div class="header">
+    <header class="transparent-header">
+      <img src="../assets/Logo_Game_of_Thrones.png" alt="Game of Thrones Logo" class="logo" />
+      <!-- <h1>Gallerie des personnages de Game of Thrones</h1> -->
+      <h1>GALLERIE DES PERSONNAGES DE GAME OF THRONES</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "HeaderGot",
+};
+</script>
+
+<style scoped>
+.header {
+  background-color: transparent; /* Set the background color to transparent */
+  padding: 15px;
 }
 
-.intro h1 {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  display: block; /* Affiche l'élément en tant que bloc */
+.transparent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.83);
+  /* font-family: Arial, sans-serif; */
+  font-family: 'Lucida Sans';
+  transition: background-color 0.3s ease;
 }
 
-.intro p {
-  position: absolute;
-  top: 50%;
-  margin-left: 140px;
-  margin-right: 140px;
-  font-size: 19px;
-  line-height: 1.5;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  display: block; /* Affiche l'élément en tant que bloc */
-
-
+.logo {
+  height: 40px;
 }
-  </style>
+
+h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.83);
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f2f2f2;
+}
+</style>

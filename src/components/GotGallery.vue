@@ -1,8 +1,8 @@
-<template>
-  <div class="got-gallery">
-    <SearchBar v-model="search" @search="handleSearch" />
-    <FilterBar @sort="handleSort" />
+<template>    
+  <SearchBar v-model="search" @search="handleSearch" />
+  <FilterBar @sort="handleSort" />
 
+  <div class="got-gallery">
     <div class="gallery">
       <div class="card" v-for="character in filteredGotData" :key="character.id">
         <gotCard
@@ -87,8 +87,8 @@ export default {
   
   .got-gallery {
       max-width: 1200px;
-      margin: 30px auto;
-      font-family: Arial, sans-serif;
+      margin: 20px auto;
+      font-family: 'Lucida Sans';
       color: #333;
       text-align: center;
       display: flex;
