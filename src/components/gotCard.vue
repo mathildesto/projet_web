@@ -66,23 +66,3 @@ export default {
   margin-top: 10px;
 }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 1/ chemin qui sert à aller chercher module 'blablabl'
-
-chemin relatif ./blabla/
-
-chemin absolu @/component/componentname.vue il va direct se positionnner dans le dossier source  -->

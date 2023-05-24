@@ -1,6 +1,5 @@
 <template>
   <div>
-    <HeaderGot></HeaderGot>
     <IntroGot></IntroGot>
     <GotGallery></GotGallery>
     <FooterGot></FooterGot>
@@ -8,16 +7,14 @@
 </template>
 
 <script>
-import HeaderGot from './components/Header.vue'
 import IntroGot from './components/Intro.vue'
-import FooterGot from './components/footer.vue'
 import GotGallery from './components/GotGallery.vue'
+import FooterGot from './components/Footer.vue'
 
 export default {
   name: "App",
 
   components: {
-    HeaderGot,
     IntroGot,
     FooterGot,
     GotGallery,

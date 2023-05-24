@@ -78,7 +78,7 @@ export default {
   components: {
     gotCard,
     SearchBar,
-    FilterBar, // Include the FilterBar component here
+    FilterBar, 
   },
 }
 </script>
@@ -109,7 +109,6 @@ export default {
     padding-left: 30%;
     padding-right: 30%;
     margin: 3%;
-    /* border: none; */
     border-radius: 4px;
     margin-right: 20px;
     font-size: 16px;

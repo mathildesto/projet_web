@@ -37,7 +37,7 @@ export default {
   border-radius: 4px;
   font-family: 'Lucida Sans';
   position: absolute;
-  top: 495px;
+  top: 443px;
   left: 1050px;
 }
 
@@ -53,6 +53,6 @@ select:hover {
 
 label.filter-label {
   margin-right: 10px;
-  color: white; /* Set the text color to white */
+  color: white; 
 }
 </style>

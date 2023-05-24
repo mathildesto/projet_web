@@ -1,56 +1,64 @@
 <template>
-    <div class="intro">
-    <h1>Connaissez-vous les personnages ?</h1>
-    <p>Bienvenue dans notre galerie de personnages de Game of Thrones ! Cette série télévisée épique est célèbre pour ses intrigues 
-      politiques, ses batailles épiques et son vaste éventail de personnages mémorables. Nous avons rassemblé ici une collection de 
-      certaines des figures les plus emblématiques de la série, de Jon Snow à Daenerys Targaryen en passant par Tyrion Lannister. 
-      Découvrez les portraits, les biographies et les moments clés de chaque personnage, et plongez dans l'univers de Westeros</p>
+  <div class="intro">
+    <div class="header-overlay">
+      <HeaderGot />
     </div>
-  </template>
-  
-  
-  <script>
-  export default {
-    name: "IntroGot"
-  };
-  </script>
-  
-  
-  <style scoped>
+    <h1>Game of Thrones character gallery</h1>
+    <p>Welcome to our Game of Thrones character gallery! This epic television series is renowned for its political intrigues, epic battles, and wide array of memorable characters. Here, we have gathered a collection of some of the most iconic figures from the series, from Jon Snow to Daenerys Targaryen to Tyrion Lannister. Discover the portraits, biographies, and key moments of each character, and immerse yourself in the world of Westeros.</p>  </div>
+</template>
+
+<script>
+import HeaderGot from './Header.vue';
+
+export default {
+  name: "IntroGot",
+  components: {
+    HeaderGot,
+  },
+};
+</script>
+
+<style scoped>
 .intro {
   background-image: url("~@/assets/intro.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 500px; /* Hauteur du conteneur */
-  position: relative; /* Positionnement relatif pour les éléments enfants */
+  height: 500px;
+  position: relative;
   font-family: 'Lucida Sans';
-  color: rgba(255, 255, 255, 0.867);
+  color: rgba(255, 255, 255, 0.812);
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; /* Set a higher z-index to ensure the header is on top */
 }
 
 .intro h1 {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  display: block; /* Affiche l'élément en tant que bloc */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: block;
 }
 
 .intro p {
   position: absolute;
-  top: 40%;
+  top: 45%;
   margin-left: 140px;
   margin-right: 140px;
   font-size: 19px;
-  line-height: 1.5;
+  line-height: 1.8;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  display: block; /* Affiche l'élément en tant que bloc */
-
-
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: block;
 }
-  </style>
+</style>

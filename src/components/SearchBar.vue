@@ -28,7 +28,7 @@ export default {
     },
     cleanSearch() {
       this.search = "";
-      this.$emit("search", ""); // Emit empty string to clear the search
+      this.$emit("search", ""); 
     },
   },
 };
@@ -42,7 +42,7 @@ export default {
   font-size: 16px;
   margin-bottom: 20px;
   position: absolute;
-  top: 500px;
+  top: 450px;
   left: 300px;
   font-family: 'Lucida Sans';
 }
@@ -53,27 +53,27 @@ export default {
 }
 
 .search-icon {
-  width: 16px; /* Adjust the width of the search icon */
-  height: 16px; /* Adjust the height of the search icon */
+  width: 16px; 
+  height: 16px; 
   position: absolute;
   top: 10px;
   left: 15px;
 }
 
 input[type="text"] {
-  padding: 8px 500px 8px 36px; /* Adjust the padding to accommodate the search icon */
+  padding: 8px 500px 8px 36px; 
   margin: 0;
   border: 1px solid #ccc;
-  border-radius: 20px; /* Increase the border-radius to make the input more rounded */
+  border-radius: 20px; 
   font-size: 14px;
 }
 
 button.filter-button {
-  margin: 0;
-  padding: 3px 12px; /* Increase the padding to make the button wider */
-  background-color: white; /* Set the background color to white */
+  margin: 5px;
+  padding: 3px 12px; 
+  background-color: white; 
   border: none;
-  border-radius: 20px; /* Increase the border-radius to make the button more rounded */
+  border-radius: 20px; 
   cursor: pointer;
   font-size: 12px;
 }
