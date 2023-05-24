@@ -2,7 +2,7 @@
 <template>
     <div class="footer">
         <footer>
-            <p>Game of Thrones est une marque déposée de HBO, Inc. Ce projet est uniquement à but non lucratif et pour la pratique du développement web.</p>
+            <p>Game of Thrones is a trademark of HBO, Inc. This project is for non-profit and web development practice only.</p>
         </footer>
     </div>
   </template>

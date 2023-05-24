@@ -2,7 +2,7 @@
   <div class="gallery-options">
     <div class="search-bar">
       <img src="../assets/search-icon.png" alt="Search Icon" class="search-icon" />
-      <input type="text" name="search" placeholder="Rechercher un personnage" v-model="search" @input="handleSearch" />
+      <input type="text" name="search" placeholder="Search for a character" v-model="search" @input="handleSearch" />
     </div>
     <button v-if="search" @click="cleanSearch" class="filter-button">X</button>
   </div>
