@@ -18,7 +18,7 @@ export default {
     fullName : String,
     title : String,
 		family: String, 
-		imageUrl: {type: String, default:"https://my-best-kennel.com/pictures/default.png"}
+		imageUrl: {type: String}
 	}
 };
 </script>
